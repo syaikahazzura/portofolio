@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fbf8ff;
+  --color-surface-dim: #dad9e6;
+  --color-surface-bright: #fbf8ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f4f2ff;
+  --color-surface-container: #eeecfb;
+  --color-surface-container-high: #e8e7f5;
+  --color-surface-container-highest: #e2e1ef;
+  --color-surface-variant: #e2e1ef;
+  --color-surface-tint: #1a648c;
+
+  --color-on-surface: #1a1b25;
+  --color-on-surface-variant: #40484e;
+  --color-inverse-surface: #2f303a;
+  --color-inverse-on-surface: #f1effd;
+
+  --color-background: #fbf8ff;
+  --color-on-background: #1a1b25;
+
+  --color-primary: #00567c;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #2a6f97;
+  --color-on-primary-container: #d7ecff;
+  --color-primary-fixed: #c8e6ff;
+  --color-primary-fixed-dim: #8fcefa;
+  --color-on-primary-fixed: #001e2f;
+  --color-on-primary-fixed-variant: #004c6e;
+  --color-inverse-primary: #8fcefa;
+
+  --color-secondary: #156681;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #9adefc;
+  --color-on-secondary-container: #0f637e;
+  --color-secondary-fixed: #bde9ff;
+  --color-secondary-fixed-dim: #8cd0ee;
+  --color-on-secondary-fixed: #001f2a;
+  --color-on-secondary-fixed-variant: #004d64;
+
+  --color-tertiary: #53514e;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #6c6966;
+  --color-on-tertiary-container: #eee9e5;
+  --color-tertiary-fixed: #e6e2de;
+  --color-tertiary-fixed-dim: #cac6c2;
+  --color-on-tertiary-fixed: #1d1b19;
+  --color-on-tertiary-fixed-variant: #484644;
+
+  --color-outline: #71787f;
+  --color-outline-variant: #c0c7cf;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    overscroll-behavior: none;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(64, 72, 78, 0.18);
+    border-radius: 9999px;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+}
